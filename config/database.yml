@@ -49,7 +49,8 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: Blog_production
+  host: ec2-54-83-36-203.compute-1.amazonaws.com
+  database: d48vfkdcbrn4t4
   pool: 5
-  username: root
-  password: root
+  username: vgqanqazeuoebn
+  password: RFcOeYxWqDr6VPThKLCSzNLhxI

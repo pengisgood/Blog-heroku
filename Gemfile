@@ -7,7 +7,8 @@ gem 'rails', '3.2.22'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2', '~> 0.3.10'
+# gem 'mysql2', '~> 0.3.10'
+gem 'pg'
 
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'sass-rails',   '~> 3.2.3'

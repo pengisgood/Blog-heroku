@@ -1,0 +1,18 @@
+@import "variables";
+
+body {
+  background-color: #cccccc;
+
+  .main-wrapper {
+    padding-top: 48px;
+    padding-bottom: 48px;
+
+    .container {
+      background-color: white;
+
+      .main {
+        background-color: #eaeaea;
+      }
+    }
+  }
+}

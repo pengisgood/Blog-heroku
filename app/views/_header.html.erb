@@ -1,3 +1,6 @@
+<%
+   page_name = yield(:page_name)
+%>
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -11,13 +14,13 @@
     </div>
     <div id="navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li class="active">
+        <li class=<%= tab_style('home', page_name) %>>
           <a href="/">Home</a>
         </li>
-        <li>
+        <li class=<%= tab_style('posts', page_name) %>>
           <%= link_to 'Archive', posts_path %>
         </li>
-        <li>
+        <li class=<%= tab_style('bio', page_name) %>>
           <a href="#bio">Bio</a>
         </li>
       </ul>

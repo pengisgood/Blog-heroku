@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       log_in user
       redirect_to '/'
     else
-      render 'new'
+      redirect_to login_path, notice: 'Username or password is not correct.'
     end
   end
 

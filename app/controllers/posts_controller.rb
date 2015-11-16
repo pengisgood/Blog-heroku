@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :log_in, only: [:new, :edit, :create, :update, :destroy]
 
   # GET /posts
   def index
@@ -49,6 +50,12 @@ class PostsController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_post
     @post = Post.find(params[:id])
+  end
+
+  def log_in
+    unless logged_in?
+      redirect_to login_path, notice: 'Please log in.'
+    end
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

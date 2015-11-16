@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:session][:email])
     if user && user.authenticate(params[:session][:password])
       log_in user
-      redirect_to '/'
+      redirect_to root_path
     else
       redirect_to login_path, notice: 'Username or password is not correct.'
     end
@@ -16,5 +16,7 @@ class SessionsController < ApplicationController
 
   # DELETE /logout
   def destroy
+    log_out
+    redirect_to root_path
   end
 end

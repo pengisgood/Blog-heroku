@@ -1,5 +1,5 @@
 class WeixinController < ApplicationController
-  def checkSignature
+  def check_signature
     signature = params['signature']
     timestamp = params['timestamp']
     nonce = params['nonce']
@@ -11,8 +11,8 @@ class WeixinController < ApplicationController
 
     if sha1 == signature
       render json: params['echostr']
+    else
+      render json: nil
     end
-
-    render :nothing => true, status: 403
   end
 end

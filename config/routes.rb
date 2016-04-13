@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
 
-  get '/weixin' => 'weixin#checkSignature'
+  get '/weixin' => 'weixin#check_signature'
 
   root :to => 'home#index'
   resources :posts
